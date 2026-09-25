@@ -1,0 +1,981 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 5vw;
+
+    border-bottom: 1px solid #111111;
+}
+
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+
+.header-status {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #666666;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    padding: 100px 0;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    max-width: 800px;
+
+    margin-bottom: 80px;
+}
+
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    color: #666666;
+}
+
+
+.intro h1 {
+    font-size: clamp(48px, 7vw, 88px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+
+.intro-text {
+    max-width: 560px;
+
+    color: #555555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   INPUT SECTION
+========================================= */
+
+.input-section {
+    width: 100%;
+
+    border-top: 1px solid #111111;
+
+    padding-top: 25px;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.tabs {
+    display: flex;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.tab {
+    background: none;
+
+    border: none;
+
+    border-bottom: 1px solid transparent;
+
+    padding: 8px 0;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    color: #888888;
+}
+
+
+.tab.active {
+    color: #111111;
+
+    border-bottom-color: #111111;
+}
+
+
+/* =========================================
+   INPUT PANEL
+========================================= */
+
+.input-panel {
+    width: 100%;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   DROP ZONE
+========================================= */
+
+.drop-zone {
+    min-height: 350px;
+
+    border: 1px solid #111111;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.drop-zone:hover,
+.drop-zone.dragging {
+    background: #f5f5f5;
+}
+
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #111111;
+
+    font-size: 30px;
+
+    font-weight: 300;
+
+    margin-bottom: 25px;
+}
+
+
+.drop-zone h2 {
+    font-size: 24px;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 5px;
+}
+
+
+.drop-zone p {
+    font-size: 12px;
+
+    color: #777777;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.outline-button {
+    background: #ffffff;
+
+    border: 1px solid #111111;
+
+    padding: 13px 22px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.outline-button:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SELECTED FILE
+========================================= */
+
+.selected-file {
+    border: 1px solid #111111;
+
+    border-top: none;
+
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.file-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.file-label {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #888888;
+}
+
+
+.file-info strong {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    word-break: break-all;
+}
+
+
+.remove-button {
+    background: none;
+
+    border: none;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.receipt-textarea {
+    width: 100%;
+
+    min-height: 350px;
+
+    resize: vertical;
+
+    border: 1px solid #111111;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    outline: none;
+}
+
+
+.receipt-textarea:focus {
+    box-shadow: inset 0 0 0 1px #111111;
+}
+
+
+.receipt-textarea::placeholder {
+    color: #999999;
+}
+
+
+.textarea-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 10px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: #888888;
+}
+
+
+/* =========================================
+   ANALYSE BUTTON
+========================================= */
+
+.analyse-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border: 1px solid #111111;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.analyse-button:hover:not(:disabled) {
+    opacity: 0.8;
+}
+
+
+.analyse-button:disabled {
+    background: #dddddd;
+
+    border-color: #dddddd;
+
+    color: #888888;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    min-height: 25px;
+
+    padding: 15px 0;
+
+    font-size: 11px;
+
+    color: #777777;
+
+    text-align: center;
+}
+
+
+.status.processing {
+    color: #111111;
+}
+
+
+.status.success {
+    color: #111111;
+
+    font-weight: 600;
+}
+
+
+.status.error {
+    color: #c00000;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress-container {
+    height: 2px;
+
+    width: 100%;
+
+    background: #eeeeee;
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.progress-container.active {
+    opacity: 1;
+}
+
+
+.progress-bar {
+    height: 100%;
+
+    width: 0%;
+
+    background: #111111;
+
+    transition: width 0.15s ease;
+}
+
+
+/* =========================================
+   RESULTS
+========================================= */
+
+.results {
+    margin-top: 120px;
+
+    padding-top: 70px;
+
+    border-top: 1px solid #111111;
+}
+
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+
+.section-heading h2 {
+    font-size: 44px;
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top: 1px solid #111111;
+
+    border-bottom: 1px solid #111111;
+
+    margin-bottom: 70px;
+}
+
+
+.summary-card {
+    padding: 30px;
+
+    min-height: 150px;
+
+    border-right: 1px solid #111111;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.summary-card:last-child {
+    border-right: none;
+}
+
+
+.summary-label {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #777777;
+}
+
+
+.summary-card strong {
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 600;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   RESULT BLOCK
+========================================= */
+
+.result-block {
+    margin-bottom: 70px;
+}
+
+
+.block-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #111111;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 0;
+}
+
+
+.block-header h3 {
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   ITEM TABLE
+========================================= */
+
+.item-header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        100px
+        180px;
+
+    gap: 20px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #dddddd;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #888888;
+}
+
+
+.item {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        100px
+        180px;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 14px;
+}
+
+
+.item-quantity {
+    color: #666666;
+}
+
+
+.item-price {
+    text-align: right;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-left: 1px solid #111111;
+
+    border-bottom: 1px solid #111111;
+}
+
+
+.category-card {
+    min-height: 150px;
+
+    padding: 25px;
+
+    border-right: 1px solid #111111;
+
+    border-top: 1px solid #111111;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+
+.category-card span {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #777777;
+}
+
+
+.category-card strong {
+    font-size: 23px;
+
+    letter-spacing: -1px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   INSIGHT
+========================================= */
+
+.insight {
+    border: 1px solid #111111;
+
+    padding: 40px;
+
+    margin-bottom: 70px;
+}
+
+
+.insight p {
+    max-width: 750px;
+
+    font-size: 25px;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.7px;
+}
+
+
+/* =========================================
+   EXTRACTED TEXT
+========================================= */
+
+.extracted-text {
+    width: 100%;
+
+    min-height: 300px;
+
+    resize: vertical;
+
+    padding: 25px;
+
+    border: 1px solid #111111;
+
+    border-top: none;
+
+    outline: none;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    background: #fafafa;
+}
+
+
+.extracted-text:focus {
+    background: #ffffff;
+}
+
+
+.small-button {
+    border: none;
+
+    background: none;
+
+    text-decoration: underline;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   NEW RECEIPT
+========================================= */
+
+.new-receipt-button {
+    width: 100%;
+
+    padding: 18px;
+
+    background: #ffffff;
+
+    border: 1px solid #111111;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.new-receipt-button:hover {
+    background: #111111;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    width: 100%;
+
+    padding: 25px 5vw;
+
+    border-top: 1px solid #111111;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: #777777;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 20px;
+    }
+
+
+    .container {
+        width: 90%;
+
+        padding: 60px 0;
+    }
+
+
+    .intro {
+        margin-bottom: 55px;
+    }
+
+
+    .intro h1 {
+        font-size: 48px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .drop-zone {
+        min-height: 280px;
+
+        padding: 30px;
+    }
+
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .summary-card {
+        border-right: none;
+
+        border-bottom: 1px solid #111111;
+    }
+
+
+    .summary-card:last-child {
+        border-bottom: none;
+    }
+
+
+    .item-header,
+    .item {
+        grid-template-columns:
+            minmax(0, 1fr)
+            55px
+            110px;
+
+        gap: 10px;
+    }
+
+
+    .item {
+        font-size: 12px;
+    }
+
+
+    .category-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .category-card {
+        min-height: 120px;
+    }
+
+
+    .insight {
+        padding: 25px;
+    }
+
+
+    .insight p {
+        font-size: 20px;
+    }
+
+
+    .footer {
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
